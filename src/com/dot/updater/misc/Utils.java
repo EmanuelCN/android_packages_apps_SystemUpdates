@@ -95,7 +95,6 @@ public class Utils {
                 SystemProperties.get(Constants.PROP_DEVICE));
         String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
         String downloadUrl = Constants.DOWNLOAD_URL.replace("${device}", device)
-                .replace("${type}", type.equals("gapps") ? "gapps" : "vanilla")
                 .replace("${file_name}", update.getName());
         update.setDownloadUrl(downloadUrl);
         update.setVersion(object.getString("version"));
